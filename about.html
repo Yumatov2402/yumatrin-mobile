@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мир YUMATRIN MOBILE</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body style="padding-top: 80px;">
+Копировать
+<header>
+    <div class="header-left">
+        <div class="logo-container">
+            <img src="logo.jpg" alt="YM">
+            <span><span class="title-yellow">YUMATRIN</span> <span class="title-orange">MOBILE</span></span>
+        </div>
+    </div>
+    <a href="index.html" class="hero-btn primary" style="padding: 10px 20px; font-size: 1rem; text-decoration: none;">Вернуться на сайт</a>
+</header>
+
+<!-- НАЧАЛО ЭНЦИКЛОПЕДИИ -->
+<div class="world-page" style="position: relative; display: block; opacity: 1; padding-top: 20px;">
+    <div class="world-container">
+        <div class="world-sidebar">
+            <button class="world-tab active" data-color="main" onclick="openWorldTab('tab-main', this)"><svg class="tab-icon" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>Добро пожаловать</button>
+            <button class="world-tab" data-color="survival" onclick="openWorldTab('tab-survival', this)"><svg class="tab-icon" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>Выживание</button>
+            <button class="world-tab" data-color="gov" onclick="openWorldTab('tab-gov', this)"><svg class="tab-icon" viewBox="0 0 24 24"><path d="M12 7V3H2v18h20V7H12zM6 19H4v-2h2v2zm0-4H4v-2h2v2zm0-4H4V9h2v2zm0-4H4V5h2v2zm4 12H8v-2h2v2zm0-4H8v-2h2v2zm0-4H8V9h2v2zm0-4H8V5h2v2zm10 12h-8v-2h2v-2h-2v-2h2v-2h-2V9h8v10zm-2-8h-2v2h2v-2zm0 4h-2v2h2v-2z"/></svg>Гос. организации</button>
+            <button class="world-tab" data-color="crime" onclick="openWorldTab('tab-crime', this)"><svg class="tab-icon" viewBox="0 0 24 24"><path d="M21 10h-8l-2-2H5c-1.1 0-2 .9-2 2v5c0 1.1.9 2 2 2h6l2-2h8v-5zm-11 5H5v-5h5l2 2v3z"/></svg>Криминал (ОПГ)</button>
+            <button class="world-tab" data-color="biz" onclick="openWorldTab('tab-biz', this)"><svg class="tab-icon" viewBox="0 0 24 24"><path d="M20 4H4v2h16V4zm1 10v-2l-1-5H4l-1 5v2h1v6h10v-6h4v6h2v-6h1zm-9 4H6v-4h6v4z"/></svg>Бизнесы</button>
+            <button class="world-tab" data-color="estate" onclick="openWorldTab('tab-estate', this)"><svg class="tab-icon" viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>Недвижимость</button>
+            <button class="world-tab" data-color="transport" onclick="openWorldTab('tab-transport', this)"><svg class="tab-icon" viewBox="0 0 24 24"><path d="M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.21.42-1.42 1.01L3 12v8c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-8l-2.08-5.99zM6.5 16c-.83 0-1.5-.67-1.5-1.5S5.67 13 6.5 13s1.5.67 1.5 1.5S7.33 16 6.5 16zm11 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zM5 11l1.5-4.5h11L19 11H5z"/></svg>Транспорт</button>
+        </div>
+        <div class="world-content-area">
+            <!-- ТАБ 1: ГЛАВНАЯ -->
+            <div class="world-content active" id="tab-main">
+                <h1 class="world-title" style="color: var(--gold);">Добро пожаловать в игру</h1>
+                <p class="world-text"><span class="c-gold">YUMATRIN MOBILE</span> — это не просто игра, это твоя вторая жизнь. Мы создали огромный открытый мир, где каждое твое решение имеет значение. Здесь ты сам выбираешь свой путь: стать опорой государства, успешным бизнесменом или грозой улиц.</p>
+                
+                <div class="world-info-card card-biz" style="margin-bottom: 20px;">
+                    <div class="card-header"><div class="card-icon">🌍</div><h3>Твоя роль в городе</h3></div>
+                    <p>Ты не просто управляешь персонажем, ты проживаешь его жизнь. Общайся, заключай сделки, нарушай закон или защищай его. Каждое твое действие пишет твою уникальную историю. Начни с малого — устроиться на работу, купить первую машину, снять квартиру. А дальше — всё в твоих руках.</p>
+                </div>
+                
+                <div class="world-info-card card-gov">
+                    <div class="card-header"><div class="card-icon">💰</div><h3>Честная экономика</h3></div>
+                    <p>В городе работает честная система. Все деньги зарабатываются трудом. Здесь <span class="c-gold">нет преимуществ за реальные деньги</span>. Твой статус и богатство зависят только от твоих навыков и амбиций! Мы ценим тех, кто готов развиваться и вкладывать время в свой персонаж.</p>
+                </div>
+            </div>
+
+            <!-- ТАБ 2: ВЫЖИВАНИЕ -->
+            <div class="world-content" id="tab-survival">
+                <h1 class="world-title" style="color: var(--c-trans-eco);">Система выживания</h1>
+                <p class="world-text">Даже в виртуальном мире не получится бегать вечно без отдыха. Мы внедряем систему, которая заставляет следить за состоянием вашего персонажа. У каждого игрока есть <span class="c-survival">4 основных показателя</span>.</p>
+                
+                <div class="world-card-grid">
+                    <div class="world-info-card card-survival">
+                        <div class="card-header"><div class="card-icon"><svg viewBox="0 0 24 24"><path d="M11 9H9V2H7v7H5V2H3v7c0 2.12 1.66 3.84 3.75 3.97V22h2.5v-9.03C11.34 12.84 13 11.12 13 9V2h-2v7zm5-3v8h2.5v8H21V2c-2.76 0-5 2.24-5 4z"/></svg></div><h3>Голод и Жажда</h3></div>
+                        <p>У каждого игрока есть шкала сытости и водного баланса. Если вы давно не ели и не пили, ваши показатели начинают падать. Чтобы восстановить силы, посещайте кафе, рестораны или покупайте еду в магазинах. Свежая еда дает не только сытость, но и полезные баффы.</p>
+                        <div class="stat-box">
+                            <div class="stat-item">⚡ +5% к выносливости <span>(Кофе)</span></div>
+                            <div class="stat-item">🏃 +2% к скорости бега <span>(Энергетик)</span></div>
+                            <div class="stat-item">🎯 +2% к меткости <span>(Горячий обед)</span></div>
+                        </div>
+                    </div>
+
+                    <div class="world-info-card card-survival">
+                        <div class="card-header"><div class="card-icon"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg></div><h3>Штрафы при истощении</h3></div>
+                        <p>Если шкала Голода или Жажды падает до нуля, вы начинаете получать урон. <span class="c-survival">Каждые 20 секунд</span> у вас отнимается <span class="c-survival">-1 HP</span>, пока вы не поедите или не попьете.</p>
+                        <p><strong>Внимание:</strong> Броня не защищает от истощения. Даже если на вас надет суперпрочный бронежилет (100 брони), когда здоровье (HP) упадет до 0, вы все равно умрете от голода. Следите за собой!</p>
+                    </div>
+
+                    <div class="world-info-card card-survival">
+                        <div class="card-header"><div class="card-icon"><svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg></div><h3>Здоровье и Броня</h3></div>
+                        <p>Максимальный запас здоровья — <span class="c-survival">100 HP</span>. Максимальный запас брони — <span class="c-survival">100 единиц</span>.</p>
+                        <p>Броня впитывает урон от пуль и ножей. Откуда её взять?</p>
+                        <ul>
+                            <li>Выдается сотрудникам <b>силовых госструктур</b> (МВД, ФСБ, ВЧ).</li>
+                            <li>Доступна в арсеналах <b>криминальных организаций</b>.</li>
+                            <li>Можно купить в специализированных <b>бизнесах</b> (оружейные магазины) или у других игроков.</li>
+                            <li>Выпадает с <b>ивентов</b>.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ТАБ 3: ГОССТРУКТУРЫ -->
+            <div class="world-content" id="tab-gov">
+                <h1 class="world-title" style="color: var(--c-gov);">Государственные организации</h1>
+                <p class="world-text">Строгая иерархия, дисциплина и защита интересов города. Здесь ты сможешь построить карьеру от рядового сотрудника до главы ведомства.</p>
+                
+                <div class="world-card-grid">
+                    <div class="world-info-card card-gov">
+                        <div class="card-header"><div class="card-icon"><svg viewBox="0 0 24 24"><path d="M12 7V3H2v18h20V7H12zM6 19H4v-2h2v2zm0-4H4v-2h2v2zm0-4H4V9h2v2zm0-4H4V5h2v2zm4 12H8v-2h2v2zm0-4H8v-2h2v2zm0-4H8V9h2v2zm0-4H8V5h2v2zm10 12h-8v-2h2v-2h-2v-2h2v-2h-2V9h8v10zm-2-8h-2v2h2v-2zm0 4h-2v2h2v-2z"/></svg></div><h3>Правительство</h3></div>
+                        <p>Высший орган управления городом, определяющий направления развития государственных структур. Издает законы, управляет бюджетом, контролирует работу ведомств. Здесь работают <span class="c-gov">судьи, адвокаты и мэры</span>.</p>
+                        <span class="principles">Главные принципы: законность, ответственность, дисциплина и эффективное управление.</span>
+                    </div>
+                    
+                    <div class="world-info-card card-fsb">
+                        <div class="card-header"><div class="card-icon"><svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg></div><h3>ФСБ (Федеральная служба безопасности)</h3></div>
+                        <p>Специализированное силовое ведомство, отвечающее за государственную безопасность. Борьба с особо опасными преступниками, коррупцией и шпионажем. Проводят спецоперации и проверки.</p>
+                        <p>Служба требует аналитического мышления, выдержки и строгого соблюдения субординации. Пройти <span class="c-fsb">строгий отбор</span> могут только лучшие.</p>
+                        <span class="principles">Главные принципы: безопасность, дисциплина, конфиденциальность и профессионализм.</span>
+                    </div>
+
+                    <div class="world-info-card card-mvd">
+                        <div class="card-header"><div class="card-icon"><svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg></div><h3>МВД (Министерство внутренних дел)</h3></div>
+                        <p>Основная правоохранительная структура, обеспечивающая порядок на улицах. Патрулирование, погони, задержания нарушителей. Включает в себя ППС и ДПС.</p>
+                        <p>Сотрудники обязаны знать законы, соблюдать служебную дисциплину и уметь действовать в стрессовых ситуациях. МВД тесно взаимодействует с ФСБ и МЗ.</p>
+                        <span class="principles">Главные принципы: законность, безопасность граждан, дисциплина и защита порядка.</span>
+                    </div>
+
+                    <div class="world-info-card card-vch">
+                        <div class="card-header"><div class="card-icon"><svg viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zm4.24 16L12 15.45 7.77 18l1.12-4.81-3.73-3.23 4.92-.42L12 5l1.92 4.53 4.92.42-3.73 3.23L16.23 18z"/></svg></div><h3>ВЧ (Воинская часть)</h3></div>
+                        <p>Структурное подразделение, обеспечивающее военную безопасность. Охрана стратегических объектов и содействие правоохранительным органам в экстренных ситуациях.</p>
+                        <p>Военнослужащие участвуют в учениях и спецоперациях. В их обязанности входит строгое соблюдение устава и поддержание физической формы.</p>
+                        <span class="principles">Главные принципы: воинский долг, честь, дисциплина и защита государства.</span>
+                    </div>
+
+                    <div class="world-info-card card-mz">
+                        <div class="card-header"><div class="card-icon"><svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-1.99.9-1.99 2L3 19c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 11h-4v4h-4v-4H6v-4h4V6h4v4h4v4z"/></svg></div><h3>МЗ (Министерство здравоохранения)</h3></div>
+                        <p>Ключевая гражданская служба, спасающая жизни. Сотрудники работают в скорой помощи и больницах, реагируя на ДТП и конфликты. Выдают медсправки.</p>
+                        <p>В задачи медиков входит оказание первой помощи, хирургия и реабилитация. Работа требует высокой стрессоустойчивости и хладнокровия.</p>
+                        <span class="principles">Главные принципы: спасение жизней, профессионализм и оперативность.</span>
+                    </div>
+
+                    <div class="world-info-card card-smi">
+                        <div class="card-header"><div class="card-icon"><svg viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-7 12h-2v-2h2v2zm0-4h-2V6h2v4z"/></svg></div><h3>СМИ (Средства массовой информации)</h3></div>
+                        <p>Информационная организация, освещающая жизнь города. СМИ связывает государство и население. Журналисты берут интервью и делают репортажи.</p>
+                        <p>Сотрудники взаимодействуют со всеми структурами, создавая ролевые сюжеты. Работа требует креативности, грамотности и скорости.</p>
+                        <span class="principles">Главные принципы: достоверность, объективность и оперативность.</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ТАБ 4: ОПГ -->
+            <div class="world-content" id="tab-crime">
+                <h1 class="world-title" style="color: var(--c-malina);">Криминальные организации</h1>
+                <p class="world-text">Теневая сторона города. Здесь правят деньги, сила и хитрость. Выбирай свою семью и защищай её интересы любой ценой.</p>
+                
+                <div class="world-card-grid">
+                    <div class="world-info-card card-malina">
+                        <div class="card-header"><div class="card-icon"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 2.38 1.19 4.47 3 5.74V17c0 .55.45 1 1 1h6c.55 0 1-.45 1-1v-2.26c1.81-1.27 3-3.36 3-5.74 0-3.87-3.13-7-7-7zm-2 12v-2h4v2h-4z"/></svg></div><h3>Малиновское ОПГ</h3></div>
+                        <p>Одна из старейших и уважаемых группировок. Славится традициями и жесткой дисциплиной. Участники чтят субординацию и верность коллективу.</p>
+                        <p>Каждый должен понимать своё место и осознавать ответственность за действия. Предпочитают решать вопросы <span class="c-crime">"по-своему"</span>.</p>
+                    </div>
+                    <div class="world-info-card card-kurgan">
+                        <div class="card-header"><div class="card-icon"><svg viewBox="0 0 24 24"><path d="M21 10h-8l-2-2H5c-1.1 0-2 .9-2 2v5c0 1.1.9 2 2 2h6l2-2h8v-5zm-11 5H5v-5h5l2 2v3z"/></svg></div><h3>Курганское ОПГ</h3></div>
+                        <p>Дерзкая банда, готовая принимать вызовы. Стремятся расширять влияние и демонстрировать силу. Ставка на решительность и быструю реакцию.</p>
+                        <p>Успех зависит не только от силы, но и от организованности. В их рядах <span style="color: var(--c-kurgan); font-weight:bold;">много отчаянных</span>.</p>
+                    </div>
+                    <div class="world-info-card card-talnov">
+                        <div class="card-header"><div class="card-icon"><svg viewBox="0 0 24 24"><path d="M14.5 2.5L19 7l-2.1 2.1-4.5-4.5L14.5 2.5zM2 22l7-7-2.1-2.1-7 7L2 22zM8 14l2 2 6-6-2-2-6 6z"/></svg></div><h3>Тальновское ОПГ</h3></div>
+                        <p>Прагматичный подход к деятельности. Решают вопросы без лишнего внимания. Тщательно оценивают обстановку и анализируют конкурентов.</p>
+                        <p>Уделяют внимание подготовке кадров и конфиденциальности. Действуют скрытно, <span style="color: var(--c-talnov); font-weight:bold;">чужими руками</span>.</p>
+                    </div>
+                    <div class="world-info-card card-sormovo">
+                        <div class="card-header"><div class="card-icon"><svg viewBox="0 0 24 24"><path d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z"/></svg></div><h3>Сормовское ОПГ</h3></div>
+                        <p>Организованная группировка, контролирующая портовую зону. Развивают деловые связи и проводят масштабные мероприятия. Умеют <span style="color: var(--c-sormovo); font-weight:bold;">договариваться</span>.</p>
+                        <p>Участвуют в сюжетах о контрабанде и развивают внутреннюю экономику.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ТАБ 5: БИЗНЕСЫ -->
+            <div class="world-content" id="tab-biz">
+                <h1 class="world-title" style="color: var(--c-biz);">Бизнесы</h1>
+                <p class="world-text">Открой собственное дело и зарабатывай. Ты можешь стать владельцем элитного ресторана или сети магазинов, которая будет кормить уставших полицейских.</p>
+                
+                <div class="world-card-grid">
+                    <div class="world-info-card card-biz">
+                        <div class="card-header"><div class="card-icon"><svg viewBox="0 0 24 24"><path d="M20 4H4v2h16V4zm1 10v-2l-1-5H4l-1 5v2h1v6h10v-6h4v6h2v-6h1zm-9 4H6v-4h6v4z"/></svg></div><h3>Магазины и кафе</h3></div>
+                        <p>Открой магазин продуктов, уютное кафе или престижный ресторан. Нанимай сотрудников и развивай бизнес. Получай прибыль, расширяй ассортимент и создавай сеть.</p>
+                        <span class="biz-subtitle" style="color: var(--c-biz); font-weight:bold; margin-bottom:10px; display:block;">Доступные направления:</span>
+                        <ul>
+                            <li><span class="c-biz">Продуктовые магазины</span> — продажа товаров повседневного спроса. Утоляет голод.</li>
+                            <li><span class="c-biz">Кофейни</span> — уютное место. Кофе дает бафф <b>+5% к выносливости</b>.</li>
+                            <li><span class="c-biz">Кафе быстрого питания</span> — быстрый перекус и бафф <b>+2% к скорости</b>.</li>
+                            <li><span class="c-biz">Рестораны</span> — расширенное меню. Обед дает бафф <b>+2% к меткости</b>.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ТАБ 6: НЕДВИЖИМОСТЬ -->
+            <div class="world-content" id="tab-estate">
+                <h1 class="world-title" style="color: var(--c-estate-apt);">Недвижимость</h1>
+                <p class="world-text">Инвестируй деньги в квадратные метры. Цены зависят от экономики сервера. Выбирай жилье под свой статус.</p>
+                
+                <div class="world-card-grid">
+                    <div class="world-info-card card-estate-apt">
+                        <div class="card-header"><div class="card-icon"><svg viewBox="0 0 24 24"><path d="M17 11V3H7v4H3v14h8v-4h2v4h8V11h-4zM7 19H5v-2h2v2zm0-4H5v-2h2v2zm0-4H5V9h2v2zm4 4H9v-2h2v2zm0-4H9V9h2v2zm0-4H9V5h2v2zm4 8h-2v-2h2v2zm0-4h-2V9h2v2zm0-4h-2V5h2v2zm4 12h-2v-2h2v2zm0-4h-2v-2h2v2z"/></svg></div><h3>Квартиры</h3></div>
+                        <div class="price-tag">От 100 000 до 5 000 000</div>
+                        <p>Идеальный старт для каждого. Снимите уютную студию или купите просторную квартиру в центре города с видом на небоскребы. Вы можете обставлять её мебелью по своему вкусу и приглашать гостей.</p>
+                    </div>
+
+                    <div class="world-info-card card-estate-eco">
+                        <div class="card-header"><div class="card-icon"><svg viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg></div><h3>Дома (Эконом-класс)</h3></div>
+                        <div class="price-tag">От 3 000 000 до 15 000 000</div>
+                        <p>Небольшой, но уютный домик за городом. Идеальный вариант для тех, кто устал от городской суеты, но пока не готов к огромным тратам. Имеется небольшой двор и гараж для вашего первого авто.</p>
+                    </div>
+
+                    <div class="world-info-card card-estate-mid">
+                        <div class="card-header"><div class="card-icon"><svg viewBox="0 0 24 24"><path d="M19 9.3V4h-3v2.6L12 3 2 12h3v8h5v-6h4v6h5v-8h3L19 9.3zm-5-2.9h1v2.9l-1-1V6.4z"/></svg></div><h3>Дома (Средний класс)</h3></div>
+                        <div class="price-tag">От 10 000 000 до 30 000 000</div>
+                        <p>Просторные двухэтажные коттеджи в престижных районах. Огороженная территория, современный ремонт и вместительный гараж на несколько машин. Отличный показатель вашего стабильного дохода.</p>
+                    </div>
+
+                    <div class="world-info-card card-estate-elite">
+                        <div class="card-header"><div class="card-icon"><svg viewBox="0 0 24 24"><path d="M12 3L4 9v12h16V9l-8-6zm2 14h-4v-4h4v4zm4-6h-2v2h-2v-2h-4v2H8v-2H6V9.6l6-4.5 6 4.5V11z"/></svg></div><h3>Дома (Элитный класс)</h3></div>
+                        <div class="price-tag">От 45 000 000 до 150 000 000</div>
+                        <p>Роскошные особняки, которые венчают элитные районы. Личный бассейн, огромный участок, панорамные окна и мраморная отделка. Владение таким домом — прямое доказательство того, что вы стали королем этого города.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ТАБ 7: ТРАНСПОРТ -->
+            <div class="world-content" id="tab-transport">
+                <h1 class="world-title" style="color: var(--c-trans-eco);">Транспорт и Автосалоны</h1>
+                <p class="world-text">Выбирай транспорт на любой вкус. Покупай машины в салонах, собирай собственный автопарк и выделяйся на дорогах города.</p>
+                
+                <div class="world-card-grid">
+                    <div class="world-info-card card-trans-eco">
+                        <div class="card-header"><div class="card-icon"><svg viewBox="0 0 24 24"><path d="M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.21.42-1.42 1.01L3 12v8c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-8l-2.08-5.99zM6.5 16c-.83 0-1.5-.67-1.5-1.5S5.67 13 6.5 13s1.5.67 1.5 1.5S7.33 16 6.5 16zm11 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zM5 11l1.5-4.5h11L19 11H5z"/></svg></div><h3>Эконом-класс</h3></div>
+                        <div class="price-tag">От 150 000</div>
+                        <p>Доступные автомобили (Lada, Ford) для повседневных поездок и начинающих водителей. Идеальный выбор для старта. Низкая маржа, но огромный поток клиентов.</p>
+                    </div>
+
+                    <div class="world-info-card card-trans-mid">
+                        <div class="card-header"><div class="card-icon"><svg viewBox="0 0 24 24"><path d="M20 8h-3V4H3c-1.1 0-2 .9-2 2v11h2c0 1.66 1.34 3 3 3s3-1.34 3-3h6c0 1.66 1.34 3 3 3s3-1.34 3-3h2v-5l-3-4zM6 18.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm13.5-9l1.96 2.5H17V9.5h2.5zm-1.5 9c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/></svg></div><h3>Средний класс</h3></div>
+                        <div class="price-tag">От 1 500 000</div>
+                        <p>Практичные и комфортные автомобили (Toyota, Kia) для широкого круга покупателей. Отличный баланс между ценой и качеством. Стабильный спрос и хорошая прибыль.</p>
+                    </div>
+
+                    <div class="world-info-card card-trans-premium">
+                        <div class="card-header"><div class="card-icon"><svg viewBox="0 0 24 24"><path d="M21.82 12.56l-1.42-5.06C20.18 6.6 19.43 6 18.55 6H5.45c-.88 0-1.63.6-1.85 1.5l-1.42 5.06C2.07 13.02 2 13.48 2 13.96V19c0 .55.45 1 1 1h1v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h10v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h1c.55 0 1-.45 1-1v-5.04c0-.48-.07-.94-.18-1.4zM6.5 17c-.83 0-1.5-.67-1.5-1.5S5.67 14 6.5 14s1.5.67 1.5 1.5S7.33 17 6.5 17zm11 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zM5 12l1.5-4.5h11L19 12H5z"/></svg></div><h3>Премиум-класс</h3></div>
+                        <div class="price-tag">От 8 000 000</div>
+                        <p>Дорогие модели (BMW, Audi, Lamborghini) для требовательных клиентов. Показывает статус владельца. Огромная маржа, но редкие продажи.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
