@@ -23,33 +23,30 @@ function togglePayBtn() { const checkbox = document.getElementById('agreeCheckbo
 function processPayment() { if(document.getElementById('hp_field').value !== '') return false; alert('Оплата временно недоступна.'); closeModal('checkoutModal'); }
 window.onclick = function(event) { if (event.target.classList.contains('modal-overlay')) { event.target.classList.remove('active'); } }
 
-// Плавное переключение вкладок
+// Плавное переключение вкладок (Исправленная версия)
 function openWorldTab(tabId, btnElement) {
-    // 1. Убираем класс active у всех контентов
+    // 1. Убираем класс active и принудительно скрываем все блоки
     let contents = document.querySelectorAll('.world-content');
     contents.forEach(content => {
         content.classList.remove('active');
-        // Если у тебя в CSS прописана анимация появления (opacity), 
-        // она сработает при добавлении класса active.
+        content.style.display = 'none'; 
     });
 
-Копировать
 // 2. Убираем active у всех кнопок меню
 let tabs = document.querySelectorAll('.world-tab');
 tabs.forEach(tab => {
     tab.classList.remove('active');
 });
 
-// 3. Включаем нужный контент
+// 3. Показываем нужный контент
 let targetTab = document.getElementById(tabId);
 if (targetTab) {
     targetTab.classList.add('active');
+    targetTab.style.display = 'block'; // Принудительно показываем
 }
 
 // 4. Подсвечиваем нажатую кнопку
 if (btnElement) {
     btnElement.classList.add('active');
 }
-
-
 }
