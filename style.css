@@ -523,86 +523,58 @@ footer::before { content: ""; position: absolute; top: 0; left: 0; width: 100%; 
     overflow: hidden;
     background-color: var(--bg);
     pointer-events: none;
+    background-image: 
+        linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    background-size: 40px 40px;
 }
 
 .orb {
     position: absolute;
     border-radius: 50%;
-    filter: blur(80px);
-    opacity: 0.3;
-    animation: floatOrb 12s infinite alternate ease-in-out;
+    filter: blur(90px);
+    opacity: 0.4;
+    animation: floatOrb 15s infinite alternate ease-in-out;
 }
+
+.orb-1 { width: 350px; height: 350px; background: var(--accent); top: -5%; left: -5%; }
+.orb-2 { width: 450px; height: 450px; background: var(--gold); bottom: -10%; right: -10%; animation-duration: 20s; animation-delay: -5s; }
+.orb-3 { width: 300px; height: 300px; background: var(--c-trans-eco); top: 40%; left: 40%; animation-duration: 18s; animation-delay: -2s; }
 
 @keyframes floatOrb {
     0% { transform: translate(0, 0) scale(1); }
-    100% { transform: translate(100px, 50px) scale(1.3); }
+    100% { transform: translate(150px, 100px) scale(1.2); }
 }
 
-/* Настройки трех сфер (цвета берем из твоих переменных) */
-.orb-1 {
-    width: 300px; height: 300px;
-    background: var(--accent);
-    top: 10%; left: 10%;
+.card-icon {
+    transition: all 0.4s ease;
 }
 
-.orb-2 {
-    width: 400px; height: 400px;
-    background: var(--gold);
-    bottom: 10%; right: 5%;
-    animation-duration: 18s;
-    animation-delay: -5s;
-}
-
-.orb-3 {
-    width: 250px; height: 250px;
-    background: var(--c-trans-eco);
-    top: 40%; left: 40%;
-    animation-duration: 15s;
-    animation-delay: -2s;
-}
-
-@keyframes floatOrb {
-    0% { transform: translate(0, 0) scale(1); }
-    100% { transform: translate(100px, 50px) scale(1.3); }
-}
-
-/* 2. Красивые плашки принципов (в Гос. организациях) */
-.principles {
-    display: block;
-    margin-top: 15px;
-    padding-top: 12px;
-    border-top: 1px dashed rgba(255, 255, 255, 0.2);
-    font-size: 0.85rem;
-    color: #a0a0a0;
-    font-style: italic;
-    letter-spacing: 0.5px;
-    transition: color 0.3s ease;
-}
-
-.hover-glow:hover .principles {
-    color: #fff; /* При наведении на карточку текст принципов становится белым */
-}
-
-/* 3. Анимация самих иконок при наведении на карточку /
 .card-icon svg {
+    width: 28px;
+    height: 28px;
     fill: currentColor;
-    transition: transform 0.3s ease, filter 0.3s ease;
+    transition: all 0.4s ease;
+}
+
+.hover-glow:hover .card-icon {
+    box-shadow: 0 0 15px currentColor; 
+    transform: scale(1.1);
 }
 
 .hover-glow:hover .card-icon svg {
-    transform: scale(1.2) rotate(10deg); /* Иконка увеличивается и крутится /
-    filter: drop-shadow(0 0 10px currentColor); / Добавляет свечение */
-
-/* 4. Супер-анимация кнопок меню (слева) */
-.world-tab {
-    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    transform: rotate(15deg) scale(1.1);
 }
 
-.world-tab:hover {
-    transform: translateX(5px); /* Кнопка сдвигается вправо /
-    letter-spacing: 1px; / Текст чуть расширяется */
+.world-tab.active {
+    background: linear-gradient(90deg, rgba(255, 215, 0, 0.1) 0%, rgba(255, 215, 0, 0.05) 100%);
+    border-color: var(--gold);
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.2), inset 0 0 10px rgba(255, 215, 0, 0.1);
+    color: var(--gold);
+    transform: translateX(5px);
 }
 
-.world-tab:active {
-    transform: scale(0.95); /* Эффект нажатия (кнопка сжимается) */
+.world-tab.active svg {
+    fill: var(--gold);
+    filter: drop-shadow(0 0 5px var(--gold));
 }
