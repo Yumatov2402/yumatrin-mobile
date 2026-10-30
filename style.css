@@ -16,13 +16,22 @@
   -webkit-touch-callout: none;
 }
 
-body { 
-    background-color: var(--bg); 
-    color: var(--text); 
-    line-height: 1.6; 
+body {
+    background-color: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
     overflow-x: hidden;
-    background-image: radial-gradient(circle at 50% 30%, #2a1005 0%, #0a0505 40%, #050507 100%);
-    background-attachment: fixed;
+
+background-image: 
+    linear-gradient(rgba(5, 5, 7, 0.85), rgba(5, 5, 7, 0.95)),
+    url('bg-main.jpg');
+background-size: cover;
+background-position: center;
+background-attachment: fixed;
+background-repeat: no-repeat;
+
+animation: bgPan 20s infinite alternate ease-in-out;
+
 }
 
 header { position: fixed; top: 0; width: 100%; padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; background: rgba(5, 5, 7, 0.85); backdrop-filter: blur(15px); border-bottom: 1px solid var(--border); z-index: 1000; }
@@ -693,4 +702,9 @@ footer::before { content: ""; position: absolute; top: 0; left: 0; width: 100%; 
 
 .policy-card:hover b {
     color: var(--gold);
+}
+
+@keyframes bgPan {
+    0% { background-size: 100%; }
+    100% { background-size: 110%; }
 }
