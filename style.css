@@ -23,14 +23,12 @@ body {
     overflow-x: hidden;
 
 background-image: 
-    linear-gradient(rgba(5, 5, 7, 0.85), rgba(5, 5, 7, 0.95)),
+    linear-gradient(rgba(5, 5, 7, 0.6), rgba(5, 5, 7, 0.85)),
     url('bg-main.jpg');
 background-size: cover;
 background-position: center;
 background-attachment: fixed;
 background-repeat: no-repeat;
-
-animation: bgPan 20s infinite alternate ease-in-out;
 
 }
 
@@ -702,9 +700,4 @@ footer::before { content: ""; position: absolute; top: 0; left: 0; width: 100%; 
 
 .policy-card:hover b {
     color: var(--gold);
-}
-
-@keyframes bgPan {
-    0% { background-size: 100%; }
-    100% { background-size: 110%; }
 }
