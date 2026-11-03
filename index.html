@@ -16,7 +16,9 @@
             <span><span class="title-yellow">YUMATRIN</span> <span class="title-orange">MOBILE</span></span>
         </div>
     </div>
-</header><div class="nav-menu" id="sideMenu">
+</header>
+
+<div class="nav-menu" id="sideMenu">
     <a href="#" onclick="toggleMenu()">Главная</a>
     <a href="#servers" onclick="toggleMenu()">Серверы</a>
     <a href="#download-section" onclick="toggleMenu()">Скачать игру</a>
@@ -25,13 +27,17 @@
     </a>
     <a href="#socials" onclick="toggleMenu()">Соцсети</a>
     <a onclick="scrollToServersAndRegister(); toggleMenu();">Регистрация</a>
-</div><section class="hero">
+</div>
+
+<section class="hero">
     <h1><span class="title-yellow">YUMATRIN</span> <span class="title-orange">MOBILE</span></h1>
     <div class="hero-buttons">
         <button class="hero-btn primary" onclick="openDownloadModal('start', 'Начать играть')">Начать играть</button>
         <a href="about.html" class="hero-btn secondary" style="display: flex; align-items: center; justify-content: center; text-decoration: none;">Узнать об игре</a>
     </div>
-</section><section class="servers-section" id="servers">
+</section>
+
+<section class="servers-section" id="servers">
     <h2 class="section-title">Наши серверы</h2>
     <p class="section-subtitle">Выбирай сервер, который лучше подходит тебе и скорее заходи в YUMATRIN MOBILE</p>
     <div class="servers-grid">
@@ -45,36 +51,56 @@
             <button class="btn-register" onclick="openModal('registerModal')">Регистрация</button>
         </div>
     </div>
-</section><section class="download-section" id="download-section">
+</section>
+
+<section class="download-section" id="download-section">
     <h2 class="section-title">Скачать игру</h2>
     <p class="section-subtitle">Выберите подходящую платформу для установки</p>
-    <div class="platforms-grid">
-        <div class="platform-card google-play" onclick="openDownloadModal('start', 'Скачать в Google Play')">
-            <img src="IMAGE/Google.Play.png" alt="Google Play" style="width: 45px; height: 45px; object-fit: contain; z-index: 1;">
-            <div class="platform-text"><div class="platform-name">Google Play</div><div class="platform-desc">Официальный магазин</div></div>
+
+    <div class="download-list-grid">
+        <div class="download-row" onclick="openDownloadModal('google-play', 'Google Play')">
+            <img src="IMAGE/Google.Play.png" alt="Google Play">
+            <div class="download-info">
+                <div class="download-name">Google Play</div>
+                <div class="download-desc">Официальный магазин</div>
+            </div>
         </div>
-        <div class="platform-card android" onclick="openDownloadModal('android', 'Скачать Android (APK)')">
-            <img src="IMAGE/Android.png" alt="Android" style="width: 45px; height: 45px; object-fit: contain; z-index: 1; border-radius: 8px;">
-            <div class="platform-text"><div class="platform-name">Android</div><div class="platform-desc">Скачать APK файл</div></div>
+        <div class="download-row" onclick="openDownloadModal('android', 'Android (APK)')">
+            <img src="IMAGE/Android.png" alt="Android">
+            <div class="download-info">
+                <div class="download-name">Android</div>
+                <div class="download-desc">Скачать APK файл</div>
+            </div>
         </div>
-        <div class="platform-card apple" onclick="openDownloadModal('ios', 'Скачать на iOS')">
-            <img src="IMAGE/IPHONE.png" alt="iOS" style="width: 45px; height: 45px; object-fit: contain; z-index: 1; border-radius: 8px;">
-            <div class="platform-text"><div class="platform-name">iOS</div><div class="platform-desc">App Store</div></div>
+        <div class="download-row" onclick="openDownloadModal('ios', 'iOS')">
+            <img src="IMAGE/IPHONE.png" alt="iOS">
+            <div class="download-info">
+                <div class="download-name">iOS</div>
+                <div class="download-desc">App Store</div>
+            </div>
         </div>
-        <div class="platform-card rustore" onclick="openDownloadModal('rustore', 'Скачать в RuStore')">
-            <img src="IMAGE/RuStore.png" alt="RuStore" style="width: 45px; height: 45px; object-fit: contain; z-index: 1;">
-            <div class="platform-text"><div class="platform-name">RuStore</div><div class="platform-desc">Магазин РФ</div></div>
+        <div class="download-row" onclick="openDownloadModal('rustore', 'RuStore')">
+            <img src="IMAGE/RuStore.png" alt="RuStore">
+            <div class="download-info">
+                <div class="download-name">RuStore</div>
+                <div class="download-desc">Магазин РФ</div>
+            </div>
         </div>
-        <div class="platform-card windows" onclick="openDownloadModal('pc', 'Скачать на ПК')">
-            <img src="IMAGE/WIN.png" alt="Windows" style="width: 45px; height: 45px; object-fit: contain; z-index: 1; border-radius: 8px;">
-            <div class="platform-text"><div class="platform-name">PC</div><div class="platform-desc">Скачать игру</div></div>
+        <div class="download-row" onclick="openDownloadModal('pc', 'PC (Windows)')">
+            <img src="IMAGE/WIN.png" alt="PC">
+            <div class="download-info">
+                <div class="download-name">PC</div>
+                <div class="download-desc">Скачать игру</div>
+            </div>
         </div>
     </div>
-</section><section class="socials-wrapper" id="socials">
+</section>
+
+<section class="socials-wrapper" id="socials">
     <div class="social-group" style="margin-bottom: 50px;">
         <h3>Наш видеохостинг</h3>
         <div class="social-grid">
-            <a href="#" class="social-card yt" onclick="alert('Наш YouTube канал находится в разработке.'); return false;">
+            <a href="#" class="social-card yt" onclick="openDownloadModal('youtube', 'YouTube канал'); return false;">
                 <svg viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
                 YouTube
             </a>
@@ -101,7 +127,9 @@
             </a>
         </div>
     </div>
-</section><footer id="footer">
+</section>
+
+<footer id="footer">
     <div class="footer-container">
         <div class="footer-col-main">
             <div class="logo-container">
@@ -123,40 +151,30 @@
         </div>
     </div>
     <div class="copyright">
-        &copy; 2026 YUMATRIN MOBILE. Все права защищены.<br>Проект находится в стадии активной разработки.
+        <p>&copy; 2026 YUMATRIN MOBILE. Все права защищены.<br>Проект находится в стадии активной разработки.</p>
     </div>
-</footer><div class="donate-page" id="donatePage">
+</footer>
 
+<div class="donate-page" id="donatePage">
 <div class="donate-hero">
     <div class="donate-badge-top">⚡ Мгновенное пополнение</div>
     <p>Выберите способ пополнения</p>
 </div>
-
 <div class="donate-choice-grid">
-    <div class="donate-choice-card" onclick="alert('Форма для ввода суммы пока в разработке.');">
-        <div class="choice-img-wrapper">
-            <img src="IMAGE/bank.png" alt="Любое количество">
-        </div>
-        <h3>Любое количество</h3>
-        <p>Введи сумму самостоятельно</p>
-        <span class="hover-emoji">💳</span>
+    <div class="donate-choice-card" onclick="showDonateStub();">
+        <div class="choice-img-wrapper"><img src="IMAGE/bank.png" alt="Любое количество"></div>
+        <h3>Любое количество</h3><p>Введи сумму самостоятельно</p><span class="hover-emoji">💳</span>
     </div>
-    
-    <div class="donate-choice-card" onclick="alert('Наборы пока в разработке.');">
-        <div class="choice-img-wrapper">
-            <img src="IMAGE/package.png" alt="Купить набор">
-        </div>
-        <h3>Купить набор</h3>
-        <p>Выбери готовый пакет YM</p>
-        <span class="hover-emoji">💎</span>
+    <div class="donate-choice-card" onclick="showDonateStub();">
+        <div class="choice-img-wrapper"><img src="IMAGE/package.png" alt="Купить набор"></div>
+        <h3>Купить набор</h3><p>Выбери готовый пакет YM</p><span class="hover-emoji">💎</span>
     </div>
 </div>
-
 <div class="donate-back-bottom">
     <button class="btn-close-page" onclick="closeDonatePage()">← Вернуться на сайт</button>
 </div>
+</div>
 
-</div><!-- МОДАЛКИ (ОСТАВЛЯЕМ КАК БЫЛО) -->
 <div class="modal-overlay" id="checkoutModal">
     <div class="modal-content">
         <span class="close-btn" onclick="closeModal('checkoutModal')">&times;</span>
@@ -170,7 +188,9 @@
             <button class="modal-btn" id="payBtn" style="opacity: 0.5; pointer-events: none;" onclick="processPayment()">Оплатить <span id="checkoutPrice">300 ₽</span></button>
         </div>
     </div>
-</div><div class="modal-overlay" id="registerModal">
+</div>
+
+<div class="modal-overlay" id="registerModal">
     <div class="modal-content" style="max-width: 450px;">
         <span class="close-btn" onclick="closeModal('registerModal')">&times;</span>
         <h3 style="font-size: 1.8rem; margin-bottom: 20px;">Регистрация</h3>
@@ -181,15 +201,19 @@
             <label class="checkout-label">Придумай пароль</label><input type="password" class="checkout-input" placeholder="Введите пароль" required>
             <label class="checkout-label">Повтори пароль</label><input type="password" class="checkout-input" placeholder="Введите пароль" required>
             <div class="fake-captcha"><div class="fake-captcha-left"><input type="checkbox" required><span>Я не робот</span></div><div class="fake-captcha-right"><strong>reCAPTCHA</strong>Privacy - Terms</div></div>
-            <button class="modal-btn" onclick="alert('На данный момент игра находится в стадии активной разработки. Ожидайте новостей от руководства проекта YUMATRIN MOBILE!'); closeModal('registerModal');">Зарегистрироваться</button>
+            <button class="modal-btn" onclick="showRegisterStub()">Зарегистрироваться</button>
         </div>
     </div>
-</div><div class="modal-overlay" id="downloadModal">
+</div>
+
+<div class="modal-overlay" id="downloadModal">
     <div class="modal-content">
         <span class="close-btn" onclick="closeModal('downloadModal')">&times;</span>
         <h3 id="downloadModalTitle">Игра в разработке</h3>
         <p id="downloadModalText" style="text-align: center; color: #d1d5db; font-size: 1.1rem; margin-bottom: 20px;"></p>
         <button class="modal-btn" onclick="closeModal('downloadModal')">ОК</button>
     </div>
-</div><script src="script.js"></script></body>
+</div>
+
+<script src="script.js"></script></body>
 </html>
