@@ -6,7 +6,11 @@
     <title>YUMATRIN MOBILE</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body style="padding-top: 80px;"><div id="effects-container"></div><header>
+<body style="padding-top: 80px;">
+
+<div id="effects-container"></div>
+
+<header>
     <div class="header-left">
         <div class="burger-menu" onclick="toggleMenu()">
             <span></span><span></span><span></span>
@@ -65,6 +69,7 @@
                 <div class="download-desc">Официальный магазин</div>
             </div>
         </div>
+        
         <div class="download-row" onclick="openDownloadModal('android', 'Android (APK)')">
             <img src="IMAGE/Android.png" alt="Android">
             <div class="download-info">
@@ -72,6 +77,7 @@
                 <div class="download-desc">Скачать APK файл</div>
             </div>
         </div>
+        
         <div class="download-row" onclick="openDownloadModal('ios', 'iOS')">
             <img src="IMAGE/IPHONE.png" alt="iOS">
             <div class="download-info">
@@ -79,6 +85,7 @@
                 <div class="download-desc">App Store</div>
             </div>
         </div>
+        
         <div class="download-row" onclick="openDownloadModal('rustore', 'RuStore')">
             <img src="IMAGE/RuStore.png" alt="RuStore">
             <div class="download-info">
@@ -86,6 +93,7 @@
                 <div class="download-desc">Магазин РФ</div>
             </div>
         </div>
+        
         <div class="download-row" onclick="openDownloadModal('pc', 'PC (Windows)')">
             <img src="IMAGE/WIN.png" alt="PC">
             <div class="download-info">
@@ -110,6 +118,7 @@
             </a>
         </div>
     </div>
+    
     <div class="social-group">
         <h3>Наши социальные сети</h3>
         <div class="social-grid">
@@ -151,41 +160,61 @@
         </div>
     </div>
     <div class="copyright">
-        <p>&copy; 2026 YUMATRIN MOBILE. Все права защищены.<br>Проект находится в стадии активной разработки.</p>
+        <div class="footer-watermark">YUMATRIN GAMES 2026</div>
+        <p>Все права защищены. Любое копирование материалов преследуется по закону.</p>
+        <p style="margin-top: 10px; font-size: 0.75rem; opacity: 0.5;">Проект находится в стадии активной разработки.</p>
     </div>
 </footer>
 
 <div class="donate-page" id="donatePage">
-<div class="donate-hero">
-    <div class="donate-badge-top">⚡ Мгновенное пополнение</div>
-    <p>Выберите способ пополнения</p>
-</div>
-<div class="donate-choice-grid">
-    <div class="donate-choice-card" onclick="showDonateStub();">
-        <div class="choice-img-wrapper"><img src="IMAGE/bank.png" alt="Любое количество"></div>
-        <h3>Любое количество</h3><p>Введи сумму самостоятельно</p><span class="hover-emoji">💳</span>
+    <div class="donate-hero">
+        <div class="donate-badge-top">⚡ Мгновенное пополнение</div>
+        <p>Выберите способ пополнения</p>
     </div>
-    <div class="donate-choice-card" onclick="showDonateStub();">
-        <div class="choice-img-wrapper"><img src="IMAGE/package.png" alt="Купить набор"></div>
-        <h3>Купить набор</h3><p>Выбери готовый пакет YM</p><span class="hover-emoji">💎</span>
+    <div class="donate-choice-grid">
+        <div class="donate-choice-card" onclick="showDonateStub();">
+            <div class="choice-img-wrapper"><img src="IMAGE/bank.png" alt="Любое количество"></div>
+            <h3>Любое количество</h3><p>Введи сумму самостоятельно</p><span class="hover-emoji">💳</span>
+        </div>
+        <div class="donate-choice-card" onclick="showDonateStub();">
+            <div class="choice-img-wrapper"><img src="IMAGE/package.png" alt="Купить набор"></div>
+            <h3>Купить набор</h3><p>Выбери готовый пакет YM</p><span class="hover-emoji">💎</span>
+        </div>
     </div>
-</div>
-<div class="donate-back-bottom">
-    <button class="btn-close-page" onclick="closeDonatePage()">← Вернуться на сайт</button>
-</div>
+    <div class="donate-back-bottom">
+        <button class="btn-close-page" onclick="closeDonatePage()">← Вернуться на сайт</button>
+    </div>
 </div>
 
 <div class="modal-overlay" id="checkoutModal">
     <div class="modal-content">
         <span class="close-btn" onclick="closeModal('checkoutModal')">&times;</span>
-        <div style="text-align: center; margin-bottom: 25px;"><div style="font-size: 0.9rem; color: var(--gold); text-transform: uppercase; letter-spacing: 2px; font-weight: bold; margin-bottom: 5px;">Оформление заказа</div><h3 style="font-size: 2.2rem; margin-bottom: 0; color: var(--gold); text-shadow: 0 0 15px rgba(255,215,0,0.3);" id="checkoutAmount">1000 YM</h3></div>
+        <div style="text-align: center; margin-bottom: 25px;">
+            <div style="font-size: 0.9rem; color: var(--gold); text-transform: uppercase; letter-spacing: 2px; font-weight: bold; margin-bottom: 5px;">Оформление заказа</div>
+            <h3 style="font-size: 2.2rem; margin-bottom: 0; color: var(--gold); text-shadow: 0 0 15px rgba(255,215,0,0.3);" id="checkoutAmount">1000 YM</h3>
+        </div>
         <div class="checkout-form">
-            <label class="checkout-label">Выберите сервер</label><select class="checkout-input"><option>01 СЕРВЕР (В разработке)</option></select>
-            <label class="checkout-label">Введите никнейм</label><input type="text" class="checkout-input" placeholder="Neon_Player" required>
-            <label class="checkout-label">Электронная почта</label><input type="email" class="checkout-input" placeholder="yourmail@mail.ru" required>
+            <label class="checkout-label">Выберите сервер</label>
+            <select class="checkout-input">
+                <option>01 СЕРВЕР (В разработке)</option>
+            </select>
+            
+            <label class="checkout-label">Введите никнейм</label>
+            <input type="text" class="checkout-input" placeholder="Neon_Player" required>
+            
+            <label class="checkout-label">Электронная почта</label>
+            <input type="email" class="checkout-input" placeholder="yourmail@mail.ru" required>
+            
             <input type="text" id="hp_field" name="hp_field" style="display:none !important" tabindex="-1" autocomplete="off">
-            <label class="checkout-checkbox" style="margin-top: 15px;"><input type="checkbox" id="agreeCheckbox" onchange="togglePayBtn()"><span>Я согласен с <a href="policy.html">договором оферты</a> и <a href="policy.html">политикой конфиденциальности</a></span></label>
-            <button class="modal-btn" id="payBtn" style="opacity: 0.5; pointer-events: none;" onclick="processPayment()">Оплатить <span id="checkoutPrice">300 ₽</span></button>
+            
+            <label class="checkout-checkbox" style="margin-top: 15px;">
+                <input type="checkbox" id="agreeCheckbox" onchange="togglePayBtn()">
+                <span>Я согласен с <a href="policy.html">договором оферты</a> и <a href="policy.html">политикой конфиденциальности</a></span>
+            </label>
+            
+            <button class="modal-btn" id="payBtn" style="opacity: 0.5; pointer-events: none;" onclick="processPayment()">
+                Оплатить <span id="checkoutPrice">300 ₽</span>
+            </button>
         </div>
     </div>
 </div>
@@ -195,12 +224,33 @@
         <span class="close-btn" onclick="closeModal('registerModal')">&times;</span>
         <h3 style="font-size: 1.8rem; margin-bottom: 20px;">Регистрация</h3>
         <div class="checkout-form">
-            <label class="checkout-label">Введи игровой ник</label><input type="text" class="checkout-input" placeholder="Ник (Имя_Фамилия)" required>
-            <label class="checkout-label">Укажи почту</label><input type="email" class="checkout-input" placeholder="E-mail" required>
-            <label class="checkout-label">Укажи сервер</label><select class="checkout-input"><option>01 СЕРВЕР (В разработке)</option></select>
-            <label class="checkout-label">Придумай пароль</label><input type="password" class="checkout-input" placeholder="Введите пароль" required>
-            <label class="checkout-label">Повтори пароль</label><input type="password" class="checkout-input" placeholder="Введите пароль" required>
-            <div class="fake-captcha"><div class="fake-captcha-left"><input type="checkbox" required><span>Я не робот</span></div><div class="fake-captcha-right"><strong>reCAPTCHA</strong>Privacy - Terms</div></div>
+            <label class="checkout-label">Введи игровой ник</label>
+            <input type="text" class="checkout-input" placeholder="Ник (Имя_Фамилия)" required>
+            
+            <label class="checkout-label">Укажи почту</label>
+            <input type="email" class="checkout-input" placeholder="E-mail" required>
+            
+            <label class="checkout-label">Укажи сервер</label>
+            <select class="checkout-input">
+                <option>01 СЕРВЕР (В разработке)</option>
+            </select>
+            
+            <label class="checkout-label">Придумай пароль</label>
+            <input type="password" class="checkout-input" placeholder="Введите пароль" required>
+            
+            <label class="checkout-label">Повтори пароль</label>
+            <input type="password" class="checkout-input" placeholder="Введите пароль" required>
+            
+            <div class="fake-captcha">
+                <div class="fake-captcha-left">
+                    <input type="checkbox" required>
+                    <span>Я не робот</span>
+                </div>
+                <div class="fake-captcha-right">
+                    <strong>reCAPTCHA</strong>Privacy - Terms
+                </div>
+            </div>
+            
             <button class="modal-btn" onclick="showRegisterStub()">Зарегистрироваться</button>
         </div>
     </div>
@@ -215,5 +265,6 @@
     </div>
 </div>
 
-<script src="script.js"></script></body>
+<script src="script.js"></script>
+</body>
 </html>

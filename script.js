@@ -2,8 +2,14 @@ function toggleMenu() { document.getElementById('sideMenu').classList.toggle('ac
 function openModal(id) { document.getElementById(id).classList.add('active'); }
 function closeModal(id) { document.getElementById(id).classList.remove('active'); }
 
-function openDonatePage() { document.getElementById('donatePage').classList.add('active'); document.body.style.overflow = 'hidden'; }
-function closeDonatePage() { document.getElementById('donatePage').classList.remove('active'); document.body.style.overflow = 'auto'; }
+function openDonatePage() { 
+    document.getElementById('donatePage').classList.add('active'); 
+    document.body.style.overflow = 'hidden'; 
+}
+function closeDonatePage() { 
+    document.getElementById('donatePage').classList.remove('active'); 
+    document.body.style.overflow = 'auto'; 
+}
 
 function scrollToServersAndRegister() { 
     document.getElementById('servers').scrollIntoView({ behavior: 'smooth' }); 
@@ -65,7 +71,6 @@ function openDownloadModal(platform, title) {
     else if (platform === 'ios') text = "Приложение еще не опубликовано в App Store.";
     else if (platform === 'rustore') text = "В магазине RuStore игра пока недоступна.";
     else if (platform === 'pc') text = "Скачивание лаунчера для Windows временно приостановлено.";
-    else if (platform === 'macos') text = "Скачивание лаунчера для macOS временно приостановлено.";
     else if (platform === 'youtube') text = "Наш YouTube канал находится в разработке. Скоро мы выложим кучу крутых видео!";
     
     document.getElementById('downloadModalTitle').innerText = title;

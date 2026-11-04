@@ -129,7 +129,6 @@ footer::before { content: ""; position: absolute; top: 0; left: 0; width: 100%; 
 .footer-col a { display: block; color: var(--text-muted); text-decoration: none; font-size: 0.95rem; padding: 12px 20px; margin-bottom: 12px; border-radius: 8px; border: 1px solid var(--border); transition: all 0.4s ease; cursor: pointer; background: rgba(255,255,255,0.02); position: relative; overflow: hidden; }
 .footer-col a:hover { color: #000; background: var(--gold); border-color: var(--gold); box-shadow: 0 5px 15px rgba(255,215,0,0.4); transform: translateX(10px); }
 
-/* НОВАЯ ВОДЯНКА (КАК НА СКРИНЕ 4) */
 .copyright { text-align: center; color: #555; font-size: 0.9rem; padding-top: 25px; border-top: 1px solid rgba(255, 255, 255, 0.05); letter-spacing: 1px; margin-top: 40px; line-height: 1.8; }
 
 /* =========================================
@@ -334,7 +333,7 @@ footer::before { content: ""; position: absolute; top: 0; left: 0; width: 100%; 
 .world-content[id="tab-crime"] .world-info-card:nth-child(4) .card-icon { background: rgba(92, 107, 192, 0.1); color: #5c6bc0; }
 
 /* =========================================
-   СТРАНИЦЫ "ПРАВИЛА" И "ПОЛИТИКА" (С ФОНОМ!)
+   СТРАНИЦЫ "ПРАВИЛА" И "ПОЛИТИКА"
    ========================================= */
 .policy-page { 
     min-height: 100vh; 
