@@ -2,19 +2,47 @@ function toggleMenu() { document.getElementById('sideMenu').classList.toggle('ac
 function openModal(id) { document.getElementById(id).classList.add('active'); }
 function closeModal(id) { document.getElementById(id).classList.remove('active'); }
 
-function openDonatePage() { 
-    document.getElementById('donatePage').classList.add('active'); 
-    document.body.style.overflow = 'hidden'; 
-}
-function closeDonatePage() { 
-    document.getElementById('donatePage').classList.remove('active'); 
-    document.body.style.overflow = 'auto'; 
-}
+function openDonatePage() { document.getElementById('donatePage').classList.add('active'); document.body.style.overflow = 'hidden'; }
+function closeDonatePage() { document.getElementById('donatePage').classList.remove('active'); document.body.style.overflow = 'auto'; }
 
 function scrollToServersAndRegister() { 
     document.getElementById('servers').scrollIntoView({ behavior: 'smooth' }); 
     setTimeout(() => { openModal('registerModal'); }, 800); 
 }
+
+function scrollToDownloadAndOpen(platform, title) {
+    document.getElementById('download-section').scrollIntoView({ behavior: 'smooth' });
+    setTimeout(() => {
+        openDownloadModal(platform, title);
+    }, 500);
+}
+
+// --- ЛОГИКА ДЛЯ ПРАВИЛ ---
+function openRulesTab(tabId) {
+    document.getElementById('rulesMenu').style.display = 'none';
+    document.getElementById('rulesSubtitle').style.display = 'none';
+    document.getElementById(tabId).style.display = 'block';
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+
+    const backBtn = document.getElementById('backBtn');
+    backBtn.innerText = "← Назад";
+    backBtn.href = "javascript:void(0)";
+    backBtn.onclick = function() {
+        document.getElementById('rulesMenu').style.display = 'grid';
+        document.getElementById('rulesSubtitle').style.display = 'block';
+        document.getElementById('project-rules').style.display = 'none';
+        backBtn.innerText = "← Вернуться на сайт";
+        backBtn.href = "index.html";
+        backBtn.onclick = null;
+    };
+}
+
+function showStub(title) {
+    document.getElementById('downloadModalTitle').innerText = title;
+    document.getElementById('downloadModalText').innerText = "Данный раздел находится в стадии активной разработки. Мы работаем над этим, ожидайте обновлений!";
+    openModal('downloadModal');
+}
+// -------------------------
 
 function showRegisterStub() {
     document.getElementById('downloadModalTitle').innerText = "Регистрация";
@@ -71,6 +99,7 @@ function openDownloadModal(platform, title) {
     else if (platform === 'ios') text = "Приложение еще не опубликовано в App Store.";
     else if (platform === 'rustore') text = "В магазине RuStore игра пока недоступна.";
     else if (platform === 'pc') text = "Скачивание лаунчера для Windows временно приостановлено.";
+    else if (platform === 'macos') text = "Скачивание лаунчера для macOS временно приостановлено.";
     else if (platform === 'youtube') text = "Наш YouTube канал находится в разработке. Скоро мы выложим кучу крутых видео!";
     
     document.getElementById('downloadModalTitle').innerText = title;
